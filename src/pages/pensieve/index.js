@@ -57,8 +57,7 @@ const StyledPost = styled.li`
     position: relative;
     z-index: 1;
   }
-
-  
+    
   .post__inner {
     ${({ theme }) => theme.mixins.boxShadow};
     ${({ theme }) => theme.mixins.flexBetween};
