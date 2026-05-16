@@ -35,7 +35,7 @@ const StyledContactSection = styled.section`
     font-size: clamp(40px, 5vw, 60px);
   }
 
-  .email-link {
+  .pinterest-link {
     ${({ theme }) => theme.mixins.bigButton};
     margin-top: 50px;
   }

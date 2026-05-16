@@ -40,7 +40,7 @@ const StyledHeroSection = styled.section`
     max-width: 540px;
   }
 
-  .email-link {
+  .pinterest-link {
     ${({ theme }) => theme.mixins.bigButton};
     margin-top: 50px;
   }
@@ -61,27 +61,25 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Bui Cong Hoang</h2>;
-  const three = <h3 className="big-heading">I build things for the web.</h3>;
+  const three = <h3 className="small-heading">Software Engineer | Filmmaker | Photographer</h3>;
   const four = (
     <>
       <p>
-        I’m a software engineer specializing in building (and occasionally designing) exceptional
-        digital experiences. Currently, I’m focused on building accessible, human-centered products
-        at{' '}
-        <a href="https://upstatement.com/" target="_blank" rel="noreferrer">
-          Upstatement
-        </a>
-        .
+        I’m a Software Engineer with a strong focus on Frontend development. Besides spending hours
+        optimizing code and crafting seamless user interfaces, I have a massive passion for media
+        and travel. Because of this, when I step away from the computer screen, you might also find
+        me in the role of a photographer and filmmaker, capturing life's stories through my own
+        lens.
       </p>
     </>
   );
   const five = (
     <a
-      className="email-link"
-      href="https://www.newline.co/courses/build-a-spotify-connected-app"
+      className="pinterest-link"
+      href="https://www.pinterest.com/MrCongHoangg/_profile/"
       target="_blank"
       rel="noreferrer">
-      Check out my course!
+      Check out my pinterest!
     </a>
   );
 

@@ -10,9 +10,51 @@ const StyledContent = styled.div`
   min-height: 100vh;
 `;
 
+const StyledScrollToTop = styled.button`
+  ${({ theme }) => theme.mixins.button};
+  position: fixed;
+  bottom: 30px;
+  right: 80px;
+  z-index: 99;
+  padding: 10px 15px;
+  background-color: var(--navy);
+  color: var(--green);
+  box-shadow: 0 10px 30px -10px var(--navy-shadow);
+  opacity: ${props => (props.show ? 1 : 0)};
+  visibility: ${props => (props.show ? 'visible' : 'hidden')};
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  transform: translateY(${props => (props.show ? '0' : '20px')});
+  border-radius: var(--border-radius);
+
+  &:hover,
+  &:focus {
+    transform: translateY(-3px);
+  }
+
+  @media (max-width: 768px) {
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 12px;
+  }
+`;
+
 const Layout = ({ children, location }) => {
   const isHome = location.pathname === '/';
-  const [isLoading, setIsLoading] = useState(isHome);
+  const [isLoading, setIsLoading] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const hasLoaded = window.sessionStorage.getItem('hasLoaded');
+      return isHome && !hasLoaded;
+    }
+    return isHome;
+  });
+
+  useEffect(() => {
+    if (isLoading && isHome && typeof window !== 'undefined') {
+      window.sessionStorage.setItem('hasLoaded', 'true');
+    }
+  }, [isLoading, isHome]);
+
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   // Sets target="_blank" rel="noopener noreferrer" on external links
   const handleExternalLinks = () => {
@@ -26,6 +68,18 @@ const Layout = ({ children, location }) => {
       });
     }
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 400) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     if (isLoading) {
@@ -72,6 +126,13 @@ const Layout = ({ children, location }) => {
               </div>
             </StyledContent>
           )}
+
+          <StyledScrollToTop
+            show={showScrollTop}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            aria-label="Scroll to Top">
+            &uarr;
+          </StyledScrollToTop>
         </ThemeProvider>
       </div>
     </>
