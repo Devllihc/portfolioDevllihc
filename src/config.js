@@ -14,6 +14,10 @@ module.exports = {
       name: 'Instagram',
       url: 'https://www.instagram.com/mr.devllihc/',
     },
+    {
+      name: 'Beacons',
+      url: 'http://beacons.ai/conghoang',
+    },
     // {
     //   name: 'Twitter',
     //   url: 'https://twitter.com/bchiang7',

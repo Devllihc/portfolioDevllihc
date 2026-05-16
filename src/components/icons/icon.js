@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {
   IconAppStore,
   IconBookmark,
+  IconBeacons,
   IconCodepen,
   IconExternal,
   IconFolder,
@@ -21,6 +22,8 @@ const Icon = ({ name }) => {
   switch (name) {
     case 'AppStore':
       return <IconAppStore />;
+    case 'Beacons':
+      return <IconBeacons />;
     case 'Bookmark':
       return <IconBookmark />;
     case 'Codepen':
