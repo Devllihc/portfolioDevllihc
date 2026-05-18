@@ -64,13 +64,7 @@ const Hero = () => {
   const three = <h3 className="small-heading">Software Engineer | Filmmaker | Photographer</h3>;
   const four = (
     <>
-      <p>
-        I’m a Software Engineer with a strong focus on Frontend development. Besides spending hours
-        optimizing code and crafting seamless user interfaces, I have a massive passion for media
-        and travel. Because of this, when I step away from the computer screen, you might also find
-        me in the role of a photographer and filmmaker, capturing life's stories through my own
-        lens.
-      </p>
+      <p>You can call me Devllihc</p>
     </>
   );
   const five = (

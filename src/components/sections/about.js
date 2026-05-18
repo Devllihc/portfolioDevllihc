@@ -143,8 +143,8 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Hoang and I enjoy creating things that live on the internet. As a
-              Computer Science graduate from{' '}
+              Hello! My name is Hoang (Devllihc) and I enjoy creating things that live on the
+              internet. As a Computer Science graduate from{' '}
               <a href="https://hust.edu.vn/" target="_blank" rel="noopener noreferrer">
                 Hanoi University of Science and Technology
               </a>
