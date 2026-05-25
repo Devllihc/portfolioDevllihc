@@ -70,7 +70,7 @@ const Hero = () => {
   const five = (
     <a
       className="pinterest-link"
-      href="https://www.pinterest.com/MrCongHoangg/_pins/"
+      href="https://www.pinterest.com/mrconghoangg/"
       target="_blank"
       rel="noreferrer">
       Check out my pinterest!
