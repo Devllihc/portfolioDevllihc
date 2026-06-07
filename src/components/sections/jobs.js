@@ -35,34 +35,15 @@ const StyledTabList = styled.div`
   @media (max-width: 600px) {
     display: flex;
     overflow-x: auto;
-    width: calc(100% + 100px);
+    width: max-content;
+    max-width: 100%;
     padding-left: 50px;
-    margin-left: -50px;
-    margin-bottom: 30px;
+    padding-right: 50px;
+    margin: 0 auto 30px;
   }
   @media (max-width: 480px) {
-    width: calc(100% + 50px);
     padding-left: 25px;
-    margin-left: -25px;
-  }
-
-  li {
-    &:first-of-type {
-      @media (max-width: 600px) {
-        margin-left: 50px;
-      }
-      @media (max-width: 480px) {
-        margin-left: 25px;
-      }
-    }
-    &:last-of-type {
-      @media (max-width: 600px) {
-        padding-right: 50px;
-      }
-      @media (max-width: 480px) {
-        padding-right: 25px;
-      }
-    }
+    padding-right: 25px;
   }
 `;
 
@@ -87,6 +68,8 @@ const StyledTabButton = styled.button`
   @media (max-width: 600px) {
     ${({ theme }) => theme.mixins.flexCenter};
     min-width: 120px;
+    width: var(--tab-width);
+    flex-shrink: 0;
     padding: 0 15px;
     border-left: 0;
     border-bottom: 2px solid var(--lightest-navy);
