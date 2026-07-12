@@ -3,3 +3,4 @@ env
 .cache/
 public/
 .DS_Store
+.docs/
