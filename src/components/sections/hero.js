@@ -113,7 +113,7 @@ const Hero = () => {
   const one = <h1>Hi, my name is</h1>;
   const two = (
     <h2 className="big-heading">
-      {prefersReducedMotion ? 'Bui Cong Hoang' : <ScrambleText text="Bui Cong Hoang" />}
+      {prefersReducedMotion ? 'Devllihc' : <ScrambleText text="Devllihc" />}
     </h2>
   );
   const three = (
@@ -121,7 +121,7 @@ const Hero = () => {
   );
   const four = (
     <>
-      <p>You can call me Devllihc</p>
+      <p>You can call me Bui Cong Hoang</p>
     </>
   );
   const five = (

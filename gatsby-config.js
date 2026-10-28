@@ -2,7 +2,7 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Bui Cong Hoang',
+    title: 'Devllihc',
     description:
       'Bui Cong Hoang is a software engineer who specializes in building (and occasionally designing) exceptional digital experiences.',
     siteUrl: 'https://buiconghoang.com', // No trailing slash allowed!

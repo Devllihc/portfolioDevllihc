@@ -73,8 +73,8 @@ if (
   window.Worker &&
   !window.matchMedia('(prefers-reduced-motion: reduce)').matches
 ) {
-  const words = ['Devllihc', 'Frontend Dev', 'Software Dev', 'Web Developer']
-  const fx = new TitleScramble('Bui Cong Hoang · ')
+  const words = ['Frontend Dev', 'Software Dev', 'Web Developer']
+  const fx = new TitleScramble('Devllihc · ')
   fx.text = words[0] // khớp với <title> trong HTML
 
   let i = 0
